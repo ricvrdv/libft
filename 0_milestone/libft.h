@@ -5,6 +5,7 @@
 # include <strings.h>
 # include <stdlib.h>
 # include <ctype.h>
+# include <unistd.h>
 
 // Functions prototypes
 void	*ft_memset(void *b, int c, size_t len);

@@ -24,7 +24,7 @@ $(NAME): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Rule to clean up object files and the library
+# Rule to clean up object files
 clean:
 	rm -f $(OBJS)
 

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -12,7 +13,6 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
                 dst_len++;
         while (src[src_len] != '\0')
                 src_len++;
-
         if (dst_len >= size)
                 return (size + src_len);
         i = 0;
@@ -34,7 +34,7 @@ int     main(void)
 
         printf("Destination: \"%s\"\tSource: \"%s\"\n", destination, source);
 
-        size = 3;
+        size = 12;
         total_length = ft_strlcat(destination, source, size);
         printf("Concatenated (length = %zu): \"%s\"\n", total_length, destination);
         return (0);

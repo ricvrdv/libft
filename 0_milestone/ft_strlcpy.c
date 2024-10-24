@@ -1,28 +1,32 @@
-size_t	strlcpy(char *dst, const char *src, size_t dstsize)
+#include <stdio.h>
+
+size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	len;
-	int	i;
-	
-	i = 0;
-	len = 0;
-	while (src[len] != '\0')
-		len++;
-	if (dstsize >= len + 1)
-	{
-		while (i < dstsize)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-	}
-	else
-	{
-		while (i < dstsize - 1)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-	}
-	dst[i] = '\0';
-	return (len);
-}	
+        size_t  i;
+
+        i = 0;
+        if (size > 0)
+        {
+                while (src[i] != '\0' && i < (size -1))
+                {
+                        dst[i] = src[i];
+                        i++;
+                }
+                dst[i] = '\0';
+        }
+        while (src[i] != '\0')
+                i++;
+        return (i);
+}
+
+int     main(void)
+{
+        char    *source = "Hello World!";
+        char    destination[10];
+        size_t  length;
+
+        length = ft_strlcpy(destination, source, 10);
+        printf("Source (length = %zu): \"%s\"\n", length, source);
+        printf("Destination: \"%s\"\n", destination);
+        return (0);
+}       

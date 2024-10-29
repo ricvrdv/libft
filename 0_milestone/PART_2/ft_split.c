@@ -105,12 +105,14 @@ int main(void)
     char    delimiter = ' ';
     char    **str_array;
 
-    printf("%s\n", string);
+    printf("Original string: \"%s\"\n", string);
     str_array = ft_split(string, delimiter);
+    printf("Split strings:\n{\n");
     while (*str_array != 0)
     {
-        printf("%s\n", *str_array);
+        printf("\"%s\"\n", *str_array);
         str_array++;
     }
+    printf("}\n");
     return (0);
 }

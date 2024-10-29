@@ -2,20 +2,19 @@
 #include <stdlib.h>
 
 static int      count_digits(long nbr);
-char    *ft_itoa(int n);
+static char     *mem_allocate(int digits);
+char            *ft_itoa(int n);
 
 char    *ft_itoa(int n)
 {
-        int     digits;
         char    *string;
-        int     i;
         long    nbr;
+        int             digits;
+        int             i;
 
         nbr = n;
         digits = count_digits(nbr);
-        string = (char *)malloc(sizeof(char) * (digits + 1));
-        if (!string)
-                return (NULL);
+        string = mem_allocate(digits);
         if (nbr < 0)
         {
                 string[0] = '-';
@@ -24,7 +23,7 @@ char    *ft_itoa(int n)
         i = digits - 1;
         while (nbr > 0)
         {
-                string[i] =((nbr % 10) + '0');
+                string[i] = ((nbr % 10) + '0');
                 nbr /= 10;
                 i--;
         }
@@ -52,12 +51,22 @@ static int      count_digits(long nbr)
         return (digits);
 }
 
+static char     *mem_allocate(int digits)
+{
+        char    *string;
+
+        string = (char *)malloc(sizeof(char) * (digits + 1));
+        if (!string)
+                return (NULL);
+        return (string);
+}
+
 int     main(int argc, char *argv[])
 {
         if (argc == 2)
         {
-                printf("%s\n", argv[1]);
-                printf("%s\n", ft_itoa(atoi(argv[1])));
+                printf("Number: %s\n", argv[1]);
+                printf("String: %s\n", ft_itoa(atoi(argv[1])));
                 return (0);
         }
         return (1);

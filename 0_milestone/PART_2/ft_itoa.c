@@ -1,61 +1,64 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned int    count_digits(int n);
+static int      count_digits(long nbr);
 char    *ft_itoa(int n);
 
 char    *ft_itoa(int n)
 {
-    unsigned int    digits;
-    unsigned int    len;
-    char    *string;
-    char    ch;
+        int     digits;
+        char    *string;
+        int     i;
+        long    nbr;
 
-    digits = count_digits(n);
-    len = digits;
-    string = (char *)malloc(sizeof(char) * (digits + 1));
-    if (!string)
-        return (NULL);
-    if (n < 0)
-    {
-        string[0] = '-';
-        n = -n;
-    }
-    string[len] = '\0';
-    while (n / 10 >= 0 && digits)
-    {
-        ch = (n % 10) + '0';
-        string[digits - 1] = ch;
-        n /= 10;
-        digits--;
-    }
-    return (string);
+        nbr = n;
+        digits = count_digits(nbr);
+        string = (char *)malloc(sizeof(char) * (digits + 1));
+        if (!string)
+                return (NULL);
+        if (nbr < 0)
+        {
+                string[0] = '-';
+                nbr = -nbr;
+        }
+        i = digits - 1;
+        while (nbr > 0)
+        {
+                string[i] =((nbr % 10) + '0');
+                nbr /= 10;
+                i--;
+        }
+        if (n == 0)
+                string[0] = '0';
+        string[digits] = '\0';
+        return (string);
 }
 
-unsigned int    count_digits(int n)
+static int      count_digits(long nbr)
 {
-    unsigned int    digits;
-    
-    digits = 1;
-    if (n < 0)
-    {
-        n = -n;
-        digits++;
-    }
-    while (n/10 > 0)
-    {
-        n /= 10;
-        digits++;
-    }
-    return (digits);
+        int     digits;
+
+        digits = 1;
+        if (nbr < 0)
+        {
+                digits++;
+                nbr = -nbr;
+        }
+        while (nbr / 10 > 0)
+        {
+                nbr /= 10;
+                digits++;
+        }
+        return (digits);
 }
 
-int main(void)
+int     main(int argc, char *argv[])
 {
-    int n = 0;
-    char    *string;
-
-    string = ft_itoa(n);
-    printf("%s\n", string);
-    return (0);
+        if (argc == 2)
+        {
+                printf("%s\n", argv[1]);
+                printf("%s\n", ft_itoa(atoi(argv[1])));
+                return (0);
+        }
+        return (1);
 }

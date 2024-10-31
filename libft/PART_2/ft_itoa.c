@@ -15,6 +15,8 @@ char    *ft_itoa(int n)
         nbr = n;
         digits = count_digits(nbr);
         string = mem_allocate(digits);
+        if (!string)
+                return (NULL);
         if (nbr < 0)
         {
                 string[0] = '-';
@@ -23,9 +25,8 @@ char    *ft_itoa(int n)
         i = digits - 1;
         while (nbr > 0)
         {
-                string[i] = ((nbr % 10) + '0');
+                string[i--] = ((nbr % 10) + '0');
                 nbr /= 10;
-                i--;
         }
         if (n == 0)
                 string[0] = '0';
@@ -61,11 +62,11 @@ static char     *mem_allocate(int digits)
         return (string);
 }
 
-int     main(int argc, char *argv[])
+int   main(int argc, char *argv[])
 {
         if (argc == 2)
         {
-                printf("Number: %s\n", argv[1]);
+                printf("Number: %s\n", argv[1]); 
                 printf("String: %s\n", ft_itoa(atoi(argv[1])));
                 return (0);
         }

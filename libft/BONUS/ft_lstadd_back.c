@@ -7,15 +7,26 @@ typedef struct  s_list
     struct s_list   *next;
 }                   t_list;
 
+void    ft_lstadd_back(t_list **lst, t_list *new);
 t_list  *ft_lstnew(void *content);
-void    ft_lstadd_front(t_list **lst, t_list *new);
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void    ft_lstadd_back(t_list **lst, t_list *new)
 {
+    t_list  *last;
+
     if (lst == NULL || new == NULL)
         return ;
-    new->next = *lst;
-    *lst = new;
+    if (*lst == NULL)
+    {
+        *lst = new;
+        return ;
+    }
+    last = *lst;
+    while (last->next != NULL)
+    {
+        last = last->next;
+    }
+    last->next = new;
 }
 
 t_list  *ft_lstnew(void *content)
@@ -31,17 +42,19 @@ t_list  *ft_lstnew(void *content)
 
 int main(void)
 {
-    t_list  *head = NULL;
+    t_list  *head;
     t_list  *current;
-    char *content_1 = "Added first";
-    char *content_2 = "Added second";
-    char *content_3 = "Added third";
-    char *content_4 = "Added last";
+    char    *content_1 = "Added first";
+    char    *content_2 = "Added second";
+    char    *content_3 = "Added third";
+    char    *content_4 = "Added last";
 
     head = ft_lstnew(content_1);
-    head->next = ft_lstnew(content_2);
-    ft_lstadd_front(&head, ft_lstnew(content_3));
-    ft_lstadd_front(&head, ft_lstnew(content_4));
+    current = head;
+    current->next = ft_lstnew(content_2);
+    current = current->next;
+    current->next = ft_lstnew(content_3);
+    ft_lstadd_back(&head, ft_lstnew(content_4));
     current = head;
     while (current != NULL)
     {

@@ -1,47 +1,45 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-typedef struct  s_list
-{
-    void            *content;
-    struct s_list   *next;
-}                   t_list;
+#include "libft.h"
 
 t_list  *ft_lstnew(void *content)
 {
-    t_list  *new_node;
-    new_node = malloc(sizeof(t_list));
-    if (!new_node)
-        return (NULL);
-    new_node->content = content;
-    new_node->next = NULL;
-    return (new_node);
+        t_list  *new_node;
+
+        new_node = malloc(sizeof(t_list));
+        if (!new_node)
+                return (NULL);
+        new_node->content = content;
+        new_node->next = NULL;
+        return (new_node);
 }
 
-int main(void)
+int   main(void)
 {
-    t_list  *head = NULL;
-    t_list  *current;
-    t_list  *next;
-    int content1 = 65;
-    char    content2 = 'B';
+        t_list  *head = NULL;
+        t_list  *current = NULL;
+        int     content_1 = 65;
+        char    content_2 = 'B';
+        char    content_3 = 'C';
 
-    head = ft_lstnew(&content1);
-    head->next = ft_lstnew(&content2);
-    while (head != NULL)
-    {
-        printf("Node content: %c\n", *(int *)head->content);
-        head = head->next;
-    }
-    printf("End of list.\n");
-    current = head;
-    while (current != NULL)
-    {
-        next = current->next;
-        free(current->content);
-        free(current);
-        current = next;
-    }
-    head = NULL;
-    return (0);
+        head = ft_lstnew(&content_1);
+        current = head;
+        current->next = ft_lstnew(&content_2);
+        current = current->next;
+        current->next = ft_lstnew(&content_3);
+        current = head;
+        printf("List:\n");
+        while (current)
+        {
+                printf("'%c' -> ", *(int *)current->content);
+                current = current->next;
+        }
+        printf("NULL\n");
+        while (head != NULL)
+        {
+                current = head;
+                head = head->next;
+                free(current);
+        }
+        return (0);
 }

@@ -41,6 +41,20 @@ SRCS = ft_isalpha.c \
 
 OBJS = $(SRCS:.c=.o)
 
+EXEC = a.out
+
+BONUS = ft_lstnew.c \
+        ft_lstadd_front.c \
+        ft_lstsize.c \
+        ft_lstlast.c \
+        ft_lstadd_back.c \
+        ft_lstdelone.c \
+        ft_lstclear.c \
+        ft_lstiter.c \
+        ft_lstmap.c
+
+BONUS_OBJS = $(BONUS:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -50,11 +64,14 @@ $(NAME): $(OBJS)
         $(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-        rm -f $(OBJS)
+        rm -f $(OBJS) $(EXEC) $(BONUS_OBJS)
 
 fclean: clean
         rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re
+bonus: $(BONUS_OBJS)
+        @make OBJS="$(BONUS_OBJS)" all
+
+.PHONY: all, clean, fclean, re, bonus

@@ -53,7 +53,7 @@ BONUS = ft_lstnew.c \
         ft_lstiter.c \
         ft_lstmap.c
 
-BONUS_OBJS = $(BONUS:.c=.o)
+BONUS_OBJS = $(BONUS:.c=.o) $(OBJS)
 
 all: $(NAME)
 
@@ -71,7 +71,7 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(BONUS_OBJS)
+bonus:  $(BONUS_OBJS)
         @make OBJS="$(BONUS_OBJS)" all
 
 .PHONY: all, clean, fclean, re, bonus

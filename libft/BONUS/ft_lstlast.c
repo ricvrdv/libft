@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../libft.h"
 
 t_list  *ft_lstlast(t_list *lst)
 {
@@ -11,7 +11,7 @@ t_list  *ft_lstlast(t_list *lst)
         return (lst);
 }
 
-int   main(void)
+/*int   main(void)
 {
         t_list  *head = NULL;
         t_list  *current = NULL;
@@ -44,4 +44,4 @@ int   main(void)
                 free(current);
         }
         return (0);
-}
+}*/

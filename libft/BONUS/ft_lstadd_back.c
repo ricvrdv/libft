@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../libft.h"
 
 void    ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -19,7 +19,7 @@ void    ft_lstadd_back(t_list **lst, t_list *new)
         last->next = new;
 }
 
-int   main(void)
+/*int   main(void)
 {
         t_list  *head = NULL;
         t_list  *current = NULL;
@@ -49,4 +49,4 @@ int   main(void)
                 free(current);
         }
         return (0);
-}
+}*/

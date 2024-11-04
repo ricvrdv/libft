@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../libft.h"
 
-static void   add_one(void *content);
+//static void   add_one(void *content);
 
 void    ft_lstiter(t_list *lst, void (*f)(void *))
 {
@@ -13,7 +13,7 @@ void    ft_lstiter(t_list *lst, void (*f)(void *))
         }
 }
 
-static void   add_one(void *content)
+/*static void   add_one(void *content)
 {
         int     *num;
 
@@ -61,4 +61,4 @@ int     main(void)
                 free(current);
         }
         return (0);
-}
+}*/

@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../libft.h"
 
-static void   *add_one(void *content);
-static void   del_content(void *content);
+//static void   *add_one(void *content);
+//static void   del_content(void *content);
 
 t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -28,7 +28,7 @@ t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
         return (new_list);
 }
 
-static void   *add_one(void *content)
+/*static void   *add_one(void *content)
 {
         int     *num;
         
@@ -80,4 +80,4 @@ int     main(void)
         ft_lstclear(&head, del_content);
         ft_lstclear(&new_lst, del_content);
         return (0);
-}
+}*/

@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "libft.h"
+#include "../libft.h"
 
 t_list  *ft_lstnew(void *content)
 {
@@ -14,7 +14,7 @@ t_list  *ft_lstnew(void *content)
         return (new_node);
 }
 
-int   main(void)
+/*int   main(void)
 {
         t_list  *head = NULL;
         t_list  *current = NULL;
@@ -42,4 +42,4 @@ int   main(void)
                 free(current);
         }
         return (0);
-}
+}*/

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../libft.h"
 
 static int      to_trim(const char *set, char c);
 static char     *trimming(const char *s1, size_t start, size_t len);
@@ -60,7 +60,7 @@ static char     *trimming(const char *s1, size_t start, size_t len)
         return (trimmed);
 }
 
-int   main(void)
+/*int   main(void)
 {
         char    *s = "   \tHello \t  Please\n Trim me!\n ";
         char    *set = " \n\t";
@@ -71,4 +71,4 @@ int   main(void)
         s_trimmed = ft_strtrim(s, set);
         printf("Trimmed string:\n\"%s\"\n", s_trimmed);
         return (0);
-}
+}*/

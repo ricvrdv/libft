@@ -8,7 +8,7 @@ int     ft_isascii(int c)
         return (0);
 }
 
-int   main(int argc, char *argv[])
+/*int   main(int argc, char *argv[])
 {
         int     c1;
         int     c2;
@@ -30,4 +30,4 @@ int   main(int argc, char *argv[])
                 return (0);
         }
         return (1);
-}
+}*/

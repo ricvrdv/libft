@@ -5,11 +5,11 @@
 int     ft_isalnum(int c)
 {
         if (ft_isalpha(c) || ft_isdigit(c))
-                return (8);
+                return (1);
         return (0);
 }
 
-int     main(int argc, char *argv[])
+/*int     main(int argc, char *argv[])
 {
         int     c1;
         int     c2;
@@ -31,4 +31,4 @@ int     main(int argc, char *argv[])
                 return (0);
         }
         return (1);
-}
+}*/

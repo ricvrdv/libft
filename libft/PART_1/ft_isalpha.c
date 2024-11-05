@@ -4,11 +4,11 @@
 int     ft_isalpha(int c)
 {
         if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-                return (1024);
+                return (1);
         return (0);
 }
 
-int   main(int argc, char *argv[])
+/*int   main(int argc, char *argv[])
 {
         int     c1;
         int     c2;
@@ -30,4 +30,4 @@ int   main(int argc, char *argv[])
                 return (0);
         }
         return (1);
-}
+}*/

@@ -11,7 +11,7 @@ size_t  ft_strlen(const char *s)
         return (i);
 }
 
-/*int   main(int argc, char *argv[])
+int   main(int argc, char *argv[])
 {
         if (argc == 2)
         {
@@ -21,4 +21,4 @@ size_t  ft_strlen(const char *s)
                 return (0);
         }
         return (1);
-}*/
+}

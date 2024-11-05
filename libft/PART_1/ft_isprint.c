@@ -4,11 +4,11 @@
 int     ft_isprint(int c)
 {
         if (c >= 32 && c <= 126)
-                return (16384);
+                return (1);
         return (0);
 }
 
-int     main(void)
+/*int     main(void)
 {
         int     c1 = '9';
         int     c2 = '\n';
@@ -38,4 +38,4 @@ int     main(void)
                 printf("\"%c\" not printable.\n", c2);
         printf("(return value = %d)\n", isprint(c2));
         return (0);
-}
+}*/

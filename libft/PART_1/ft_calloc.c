@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdint.h>
 #include <errno.h>
-#include "../libft.h"
+#include "libft.h"
 
 void    *ft_calloc(size_t nmemb, size_t size)
 {
@@ -26,7 +26,7 @@ void    *ft_calloc(size_t nmemb, size_t size)
         return (buffer);
 }
 
-int   main(void)
+int     main(void)
 {
         size_t  nmemb = 10;
         size_t  size = 4;
@@ -35,6 +35,7 @@ int   main(void)
         char    *buffer_2;
 
         printf("%zu elements\t%zu bytes each\n", nmemb, size);
+        
         buffer_1 = (char *)ft_calloc(nmemb, size);
         printf("Using ft_calloc(): [");
         while (i < nmemb)
@@ -43,6 +44,8 @@ int   main(void)
                 i++;
         }
         printf("]\n");
+        free(buffer_1);
+
         buffer_2 = (char *)calloc(nmemb, size);
         printf("Using calloc():    [");
         i = 0;
@@ -52,5 +55,7 @@ int   main(void)
                 i++;
         }
         printf("]\n");
+        free(buffer_2);
+
         return (0);
 }

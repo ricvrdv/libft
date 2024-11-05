@@ -24,7 +24,7 @@ char    *ft_strdup(const char *s)
         return (buffer);
 }
 
-/*int     main(void)
+int     main(void)
 {
         char    *to_copy = "here we go again";
         char    *copied_1;
@@ -32,11 +32,16 @@ char    *ft_strdup(const char *s)
 
         printf("Original: \"%s\"\t", to_copy);
         printf("Memory address: %p\n\n", &to_copy);
+
         copied_1 = ft_strdup(to_copy);
         printf("Using ft_strdup:\nNew:      \"%s\"\t", copied_1);
         printf("Memory address: %p\n", &copied_1);
+        free(copied_1);
+
         copied_2 = strdup(to_copy);
         printf("Using strdup:\nNew:      \"%s\"\t", copied_2);
         printf("Memory address: %p\n", &copied_2);
+        free(copied_2);
+
         return (0);
-}*/
+}

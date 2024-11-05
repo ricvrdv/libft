@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -16,12 +15,12 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
                 little_len++;
         while (big[i] != '\0' && i < len)
         {
-                if(len - i < little_len)
+                if (len - i < little_len)
                         return (NULL);
                 j = 0;
                 while (big[i + j] == little[j] && j < little_len && i + j < len)
                         j++;
-                if(j == little_len)
+                if (j == little_len)
                         return ((char *)&big[i]);
                 i++;
         }

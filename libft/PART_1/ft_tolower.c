@@ -8,11 +8,11 @@ int     ft_tolower(int c)
         return (c);
 }
 
-int     main(void)
+/*int   main(void)
 {
-        char    ch1 = 'G';
+        char    ch = 'G';
 
-        printf("Character is \"%c\"\n", ch1);
-        printf("%c (using ft_tolower())\n", ft_tolower(ch1));
-        printf("%c (using tolower())\n", tolower(ch1));
-}
+        printf("Character is '%c'\n", ch);
+        printf("'%c' (using ft_tolower())\n", ft_tolower(ch));
+        printf("'%c' (using tolower())\n", tolower(ch));
+}*/

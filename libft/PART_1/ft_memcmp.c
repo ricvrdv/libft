@@ -21,11 +21,13 @@ int     ft_memcmp(const void *s1, const void *s2, size_t n)
 
 /*int   main(void)
 {
-        int     buffer_1[] = {1, 2, 3, 4};
-        int     buffer_2[] = {1, 2, 0, 4};
-        int     result_1 = ft_memcmp(buffer_1, buffer_2, sizeof(int) * 3);
-        int     result_2 = memcmp(buffer_1, buffer_2, sizeof(int) * 3);
+        char    *mem_1 = "abcdefg"; 
+        char    *mem_2 = "abxdefg";
+        size_t  n = sizeof(char) * 4;
+        int     result_1 = ft_memcmp(mem_1, mem_2, n);
+        int     result_2 = memcmp(mem_1, mem_2, n);
 
+        printf("Memory area 1: %s\nMemory area 2: %s\n", mem_1, mem_2);
         printf("Result (using ft_memcmp) = %d\n", result_1);
         printf("Result (using memcmp)    = %d\n", result_2);
         return (0);

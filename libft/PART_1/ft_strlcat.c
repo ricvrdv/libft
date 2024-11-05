@@ -24,7 +24,7 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
         return (dst_len + src_len);
 }
 
-int     main(void)
+/*int   main(void)
 {
         char    *source = "world!";
         char    destination[] = "Hello ";
@@ -32,9 +32,10 @@ int     main(void)
         size_t  size;
 
         printf("Destination: \"%s\"\tSource: \"%s\"\n", destination, source);
-
-        size = 12;
+        size = 10;
         total_length = ft_strlcat(destination, source, size);
         printf("Concatenated (length = %zu): \"%s\"\n", total_length, destination);
+        if (size <= total_length)
+                printf("The resulting string was truncated.\n");
         return (0);
-}
+}*/

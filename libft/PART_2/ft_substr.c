@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "../libft.h"
+#include "libft.h"
 
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -28,15 +28,23 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
         return (substring);
 }
 
-int   main(void)
+/*int   main(void)
 {
-        char    *string = "";
-        char    *substring;
-        size_t  len = 1;
-        unsigned int    start = 3;
+        char    *string_1 = "Back to back";
+        char    *string_2 = "";
+        char    *substring_1;
+        char    *substring_2;
+        size_t  len_1 = 4;
+        size_t  len_2 = 2;
+        unsigned int    start_1 = 8;
+        unsigned int    start_2 = 2;
 
-        printf("String: \"%s\"\tMax length: %zu\n", string, len);
-        substring = ft_substr(string, start, len);
-        printf("Substring: \"%s\"\n", substring);
+        printf("String 1: \"%s\"\tMax length: %zu\n", string_1, len_1);
+        substring_1 = ft_substr(string_1, start_1, len_1);
+        printf("Substring 1: \"%s\"\n\n", substring_1);
+
+        printf("String 2: \"%s\"\tMax length: %zu\n", string_2, len_2);
+        substring_2 = ft_substr(string_2, start_2, len_2);
+        printf("Substring 2: \"%s\"\n", substring_2);
         return (0);
-}
+}*/

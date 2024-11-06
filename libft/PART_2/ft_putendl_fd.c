@@ -1,5 +1,6 @@
 #include <unistd.h>
-#include <stdlib.h>
+#include <stdio.h>
+#include <fcntl.h>
 
 void    ft_putendl_fd(char *s, int fd)
 {
@@ -14,12 +15,33 @@ void    ft_putendl_fd(char *s, int fd)
         write(fd, "\n", 1);
 }
 
-int   main(int argc, char *argv[])
+int   main(void)
 {
-        if (argc == 3)
+        int     fd = 1;
+        char    *test_string = "Get me a line";
+        char    buffer[20];
+
+        printf("TESTING FOR STDOUT (fd = 1)\n");
+        ft_putendl_fd(test_string, fd);
+
+        fd = open("test_output_putendl.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+        if (fd == -1)
         {
-                ft_putendl_fd(argv[1], atoi(argv[2]));
-                return (0);
+                perror("Error opening file");
+                return (1);
         }
-        return (1);
+        printf("TESTING FOR FILE OUTPUT\n");
+        ft_putendl_fd(test_string, fd);
+        close(fd);
+        fd = open("test_output_putendl.txt", O_RDONLY);
+        if (fd == -1)
+        {
+                perror("Error opening file for reading");
+                return (1);
+        }
+        read(fd, buffer, 14);
+        printf("String written to file: %s\n", buffer);
+        close(fd);
+
+        return (0);
 }

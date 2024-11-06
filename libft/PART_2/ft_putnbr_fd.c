@@ -21,12 +21,8 @@ void    ft_putnbr_fd(int n, int fd)
         write(fd, &digit, 1);
 }
 
-int     main(int argc, char *argv[])
+int     main(void)
 {
-        if (argc == 3)
-        {
-                ft_putnbr_fd(atoi(argv[1]), atoi(argv[2]));
-                return (0);
-        }
-        return (1);
+        int     fd = 1;
+        
 }

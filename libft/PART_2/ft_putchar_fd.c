@@ -26,7 +26,7 @@ int     main(void)
         printf("TESTING FOR FILE OUTPUT:\n");
         ft_putchar_fd(test_char, fd);
         close(fd);
-        fd = open("test_output.txt", O_RDONLY);
+        fd = open("test_output_putchar.txt", O_RDONLY);
         if (fd == -1)
         {
                 perror("Error opening file for reading");

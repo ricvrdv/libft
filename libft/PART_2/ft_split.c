@@ -111,9 +111,11 @@ int     main(void)
         char    *string = "Oops I dit it again!";
         char    delimiter = ' ';
         char    **str_array;
+        char    **original_ptr;
 
         printf("Original string: \"%s\"\n", string);
         str_array = ft_split(string, delimiter);
+        original_ptr = str_array;
         printf("Split strings:\n{\n");
         while (*str_array != 0)
         {
@@ -121,5 +123,8 @@ int     main(void)
                 str_array++;
         }
         printf("}\n");
+        free_all(original_ptr, count_words(string, delimiter));
+
         return (0);
 }
+

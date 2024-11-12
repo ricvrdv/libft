@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int     ft_isascii(int c)
 {
@@ -8,7 +7,11 @@ int     ft_isascii(int c)
         return (0);
 }
 
-/*int   main(int argc, char *argv[])
+/*
+#include <stdio.h>
+#include <ctype.h>
+
+int     main(int argc, char *argv[])
 {
         int     c1;
         int     c2;
@@ -17,12 +20,12 @@ int     ft_isascii(int c)
         {
                 c1 = ft_isascii(argv[1][0]);
                 c2 = isascii(argv[1][0]);
-                printf("Using ft_isascii (return value = %d)\n", c1);
+                printf("Using ft_isascii\n");
                 if (c1)
                         printf("\"%c\" is an ASCII character.\n\n", argv[1][0]);
                 else
                         printf("\"%c\" is not an ASCII character.\n\n", argv[1][0]);
-                printf("Using isascii    (return value = %d)\n", c2);
+                printf("Using isascii\n");
                 if (c2)
                         printf("\"%c\" is an ASCII character.\n", argv[1][0]);
                 else
@@ -30,4 +33,5 @@ int     ft_isascii(int c)
                 return (0);
         }
         return (1);
-}*/
+}
+*/

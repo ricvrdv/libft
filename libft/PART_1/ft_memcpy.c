@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void    *ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -22,7 +21,11 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
         return (dest);
 }
 
-/*int   main(void)
+/*
+#include <stdio.h>
+#include <string.h>
+
+int   main(void)
 {
         char    buffer_src_1[] = "Hello world!";
         char    buffer_src_2[] = "Hello world!";
@@ -44,6 +47,7 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
         printf("Source 2:\n\"%s\"\n", buffer_src_4);
         memcpy(buffer_src_4 + 3, buffer_src_4, 5);
         printf("Destination 2 after (memcpy()):\n\"%s\"\n", buffer_src_4);
-        
+
         return (0);
-}*/
+}
+*/

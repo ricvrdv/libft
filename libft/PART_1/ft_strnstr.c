@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -27,7 +26,10 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
         return (NULL);
 }
 
-int     main(int argc, char *argv[])
+/*
+#include <stdio.h>
+
+int   main(int argc, char *argv[])
 {
         char    *big = argv[1];
         char    *little = argv[2];
@@ -41,3 +43,4 @@ int     main(int argc, char *argv[])
         }
         return (1);
 }
+*/

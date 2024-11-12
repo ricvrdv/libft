@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "libft.h"
 
 size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -7,7 +7,7 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
         i = 0;
         if (size > 0)
         {
-                while (src[i] != '\0' && i < (size -1))
+                while (src[i] != '\0' && i < (size - 1))
                 {
                         dst[i] = src[i];
                         i++;
@@ -19,9 +19,12 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
         return (i);
 }
 
-int     main(void)
+/*
+#include <stdio.h>
+
+int   main(void)
 {
-        char    *source = "Hello World!";
+        char    *source = "Hello world!";
         char    destination[10];
         size_t  length;
 
@@ -29,4 +32,5 @@ int     main(void)
         printf("Source (length = %zu): \"%s\"\n", length, source);
         printf("Destination: \"%s\"\n", destination);
         return (0);
-}       
+}
+*/

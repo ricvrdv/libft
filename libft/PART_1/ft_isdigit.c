@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int     ft_isdigit(int c)
 {
@@ -8,7 +7,11 @@ int     ft_isdigit(int c)
         return (0);
 }
 
-/*int   main(int argc, char *argv[])
+/*
+#include <stdio.h>
+#include <ctype.h>
+
+int     main(int argc, char *argv[])
 {
         int     c1;
         int     c2;
@@ -17,12 +20,12 @@ int     ft_isdigit(int c)
         {
                 c1 = ft_isdigit(argv[1][0]);
                 c2 = isdigit(argv[1][0]);
-                printf("Using ft_isdigit (return value = %d)\n", c1);
+                printf("Using ft_isdigit\n");
                 if (c1)
                         printf("%c is a digit.\n\n", argv[1][0]);
                 else
                         printf("%c is not a digit.\n\n", argv[1][0]);
-                printf("Using isdigit (return value = %d)\n", c2);
+                printf("Using isdigit\n");
                 if (c2)
                         printf("%c is a digit.\n", argv[1][0]);
                 else
@@ -30,4 +33,5 @@ int     ft_isdigit(int c)
                 return (0);
         }
         return (1);
-}*/
+}
+*/

@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int     ft_tolower(int c)
 {
@@ -8,11 +7,16 @@ int     ft_tolower(int c)
         return (c);
 }
 
-/*int   main(void)
+/*
+#include <stdio.h>
+#include <ctype.h>
+
+int   main(void)
 {
         char    ch = 'G';
 
         printf("Character is '%c'\n", ch);
         printf("'%c' (using ft_tolower())\n", ft_tolower(ch));
         printf("'%c' (using tolower())\n", tolower(ch));
-}*/
+}
+*/

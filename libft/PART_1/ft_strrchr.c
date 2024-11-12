@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char    *ft_strrchr(const char *s, int c)
 {
@@ -19,7 +18,11 @@ char    *ft_strrchr(const char *s, int c)
         return (NULL);
 }
 
-/*int   main(void)
+/*
+#include <stdio.h>
+#include <string.h>
+
+int   main(void)
 {
         char    *string = "ornitorrinco";
         char    to_locate = 'i';
@@ -30,4 +33,5 @@ char    *ft_strrchr(const char *s, int c)
         printf("Last occurrence (using ft_strrchr): %s\n", location_1);
         printf("Last occurrence (using strrchr):    %s\n", location_2);
         return (0);
-}*/
+}
+*/

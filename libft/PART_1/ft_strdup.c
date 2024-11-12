@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char    *ft_strdup(const char *s)
 {
@@ -24,7 +22,11 @@ char    *ft_strdup(const char *s)
         return (buffer);
 }
 
-int     main(void)
+/*
+#include <stdio.h>
+#include <string.h>
+
+int   main(void)
 {
         char    *to_copy = "here we go again";
         char    *copied_1;
@@ -45,3 +47,4 @@ int     main(void)
 
         return (0);
 }
+*/

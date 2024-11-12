@@ -1,32 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdint.h>
-#include <errno.h>
 #include "libft.h"
 
 void    *ft_calloc(size_t nmemb, size_t size)
 {
-        size_t  total_size;
         void    *buffer;
 
-        if (nmemb != 0 && size > SIZE_MAX / nmemb)
-        {
-                errno = ENOMEM;
-                return (NULL);
-        }
-        total_size = nmemb * size;
-        buffer = malloc(total_size);
+        if (nmemb == 0 || size == 0)
+                return (malloc(0));
+        buffer = (void *)malloc(nmemb * size);
         if (!buffer)
-        {
-                errno = ENOMEM;
                 return (NULL);
-        }
-        ft_memset(buffer, 0, total_size);
+        ft_memset(buffer, 0, nmemb * size);
         return (buffer);
 }
 
-int     main(void)
+/*
+#include <stdio.h>
+
+int   main(void)
 {
         size_t  nmemb = 10;
         size_t  size = 4;
@@ -35,7 +25,7 @@ int     main(void)
         char    *buffer_2;
 
         printf("%zu elements\t%zu bytes each\n", nmemb, size);
-        
+
         buffer_1 = (char *)ft_calloc(nmemb, size);
         printf("Using ft_calloc(): [");
         while (i < nmemb)
@@ -59,3 +49,4 @@ int     main(void)
 
         return (0);
 }
+*/

@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char    *ft_strchr(const char *s, int c)
 {
@@ -17,7 +16,11 @@ char    *ft_strchr(const char *s, int c)
         return (NULL);
 }
 
-/*int   main(void)
+/*
+#include <stdio.h>
+#include <string.h>
+
+int   main(void)
 {
         char    string[] = "ornitorrinco";
         char    to_locate = 't';
@@ -28,4 +31,5 @@ char    *ft_strchr(const char *s, int c)
         printf("First occurrence (using ft_strchr): %s\n", location_1);
         printf("First occurrence (using strchr):    %s\n", location_2);
         return (0);
-}*/
+}
+*/

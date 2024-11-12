@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 size_t  ft_strlen(const char *s)
 {
@@ -11,7 +10,11 @@ size_t  ft_strlen(const char *s)
         return (i);
 }
 
-int   main(int argc, char *argv[])
+/*
+#include <stdio.h>
+#include <string.h>
+
+int     main(int argc, char *argv[])
 {
         if (argc == 2)
         {
@@ -22,3 +25,4 @@ int   main(int argc, char *argv[])
         }
         return (1);
 }
+*/

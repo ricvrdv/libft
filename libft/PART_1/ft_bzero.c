@@ -1,10 +1,9 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void    ft_bzero(void *s, size_t n)
 {
         unsigned int    i;
-        char *ptr;
+        char                    *ptr;
 
         ptr = (char *)s;
         i = 0;
@@ -15,7 +14,11 @@ void    ft_bzero(void *s, size_t n)
         }
 }
 
-int     main(void)
+/*
+#include <stdio.h>
+#include <string.h>
+
+int   main(void)
 {
         int     i;
         int     buffer_1[] = {1, 2, 3, 4, 5};
@@ -63,3 +66,4 @@ int     main(void)
         }
         printf("\n");
 }
+*/

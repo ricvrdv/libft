@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 void    *ft_memmove(void *dest, const void *src, size_t n)
@@ -28,7 +26,11 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
         return (dest);
 }
 
-/*int   main(void)
+/*
+#include <stdio.h>
+#include <string.h>
+
+int   main(void)
 {
         char    buffer_src_1[] = "Hello world!";
         char    buffer_src_2[] = "Hello world!";
@@ -52,4 +54,5 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
         printf("Destination 2 after (memcpy()):\n\"%s\"\n", buffer_src_4);
 
         return (0);
-}*/
+}
+*/

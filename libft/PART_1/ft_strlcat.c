@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "libft.h"
 
 size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -24,7 +24,10 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
         return (dst_len + src_len);
 }
 
-/*int   main(void)
+/*
+#include <stdio.h>
+
+int   main(void)
 {
         char    *source = "world!";
         char    destination[] = "Hello ";
@@ -38,4 +41,5 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
         if (size <= total_length)
                 printf("The resulting string was truncated.\n");
         return (0);
-}*/
+}
+*/

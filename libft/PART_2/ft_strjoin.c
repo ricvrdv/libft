@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 char    *ft_strjoin(char const *s1, char const *s2)
 {
@@ -30,8 +30,6 @@ char    *ft_strjoin(char const *s1, char const *s2)
 }
 
 /*
-#include <stdio.h>
-
 int   main(void)
 {
         char    *s1 = "ABCD";

@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 int     ft_isascii(int c)
 {
@@ -8,9 +8,6 @@ int     ft_isascii(int c)
 }
 
 /*
-#include <stdio.h>
-#include <ctype.h>
-
 int     main(int argc, char *argv[])
 {
         int     c1;

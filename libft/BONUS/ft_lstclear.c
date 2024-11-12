@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 //static void   del_content(void *content);
 
@@ -24,8 +24,6 @@ static void     del_content(void *content)
 {
         free(content);
 }
-
-#include <stdio.h>
 
 int     main(void)
 {

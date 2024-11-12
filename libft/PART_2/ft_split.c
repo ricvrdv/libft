@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 static int      count_words(const char *s, char c);
 static char     **fill_array(const char *s, char **str_array, char c);
@@ -106,8 +106,6 @@ static void     free_all(char **result, int count)
 }
 
 /*
-#include <stdio.h>
-
 int   main(void)
 {
         char    *string = "Oops I dit it again!";

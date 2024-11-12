@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 void    *ft_memset(void *s, int c, size_t len)
 {
@@ -18,9 +18,6 @@ void    *ft_memset(void *s, int c, size_t len)
 }
 
 /*
-#include <stdio.h>
-#include <string.h>
-
 int     main(void)
 {
         char    buffer_1[] = "Hello";

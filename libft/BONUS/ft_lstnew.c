@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 t_list  *ft_lstnew(void *content)
 {
@@ -13,8 +13,6 @@ t_list  *ft_lstnew(void *content)
 }
 
 /*
-#include <stdio.h>
-
 int   main(void)
 {
         t_list  *head = NULL;

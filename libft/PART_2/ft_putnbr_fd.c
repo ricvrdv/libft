@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 void    ft_putnbr_fd(int n, int fd)
 {
@@ -21,9 +21,6 @@ void    ft_putnbr_fd(int n, int fd)
 }
 
 /*
-#include <stdio.h>
-#include <fcntl.h>
-
 int   main(void)
 {
         int     fd = 1;

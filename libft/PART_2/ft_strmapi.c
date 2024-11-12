@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 //static char   test_tolower(unsigned int i, char c);
 
@@ -24,7 +24,7 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
         return (string);
 }
 
-/*
+/* Example of function for testing:
 static char   test_tolower(unsigned int i, char c)
 {
         (void)i;

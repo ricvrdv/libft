@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 static int      to_trim(const char *set, char c);
 static char     *trimming(const char *s1, size_t start, size_t len);
@@ -59,8 +59,6 @@ static char     *trimming(const char *s1, size_t start, size_t len)
 }
 
 /*
-#include <stdio.h>
-
 int   main(void)
 {
         char    *s = "   \tHello Please Trim me!\n ";

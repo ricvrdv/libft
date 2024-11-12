@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -27,8 +27,6 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 }
 
 /*
-#include <stdio.h>
-
 int   main(void)
 {
         char    *string_1 = "Back to back";

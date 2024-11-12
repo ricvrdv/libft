@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 int     ft_atoi(const char *nptr)
 {
@@ -25,9 +25,6 @@ int     ft_atoi(const char *nptr)
         return (result * sign);
 }
 
-/*
-#include <stdio.h>
-
 int   main(void)
 {
         char    *str = "\t\v\f\r\n \f-1234abc54";
@@ -37,4 +34,4 @@ int   main(void)
         printf("Integer is %d (using atoi())\n", atoi(str));
         return (0);
 }
-*/
+

@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 //static void   test_tolower(unsigned int i, char *c);
 
@@ -14,15 +14,13 @@ void    ft_striteri(char *s, void (*f)(unsigned int, char *))
         }
 }
 
-/*
+/* Example of function for testing:
 static void     test_tolower(unsigned int i, char *c)
 {
         (void)i;
         if (*c >= 'A' && *c <= 'Z')
                 *c += 32;
 }
-
-#include <stdio.h>
 
 int     main(void)
 {

@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 //static void   add_one(void *content);
 
@@ -19,8 +19,6 @@ static void     add_one(void *content)
         num = (int *)content;
         (*num)++;
 }
-
-#include <stdio.h>
 
 int     main(void)
 {

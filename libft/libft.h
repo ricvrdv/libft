@@ -5,6 +5,8 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <fcntl.h>
+# include <ctype.h>
+# include <string.h>
 
 typedef struct s_list
 {

@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 size_t  ft_strlen(const char *s)
 {
@@ -11,9 +11,6 @@ size_t  ft_strlen(const char *s)
 }
 
 /*
-#include <stdio.h>
-#include <string.h>
-
 int     main(int argc, char *argv[])
 {
         if (argc == 2)

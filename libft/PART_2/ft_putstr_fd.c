@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 void    ft_putstr_fd(char *s, int fd)
 {
@@ -13,9 +13,6 @@ void    ft_putstr_fd(char *s, int fd)
 }
 
 /*
-#include <stdio.h>
-#include <fcntl.h>
-
 int   main(void)
 {
         int     fd = 1;

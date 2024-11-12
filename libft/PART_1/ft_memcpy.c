@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 void    *ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -22,9 +22,6 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
 }
 
 /*
-#include <stdio.h>
-#include <string.h>
-
 int   main(void)
 {
         char    buffer_src_1[] = "Hello world!";

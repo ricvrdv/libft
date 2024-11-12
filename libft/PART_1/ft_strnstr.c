@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -27,8 +27,6 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
 }
 
 /*
-#include <stdio.h>
-
 int   main(int argc, char *argv[])
 {
         char    *big = argv[1];

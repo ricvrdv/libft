@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 int     ft_isprint(int c)
 {
@@ -8,9 +8,6 @@ int     ft_isprint(int c)
 }
 
 /*
-#include <stdio.h>
-#include <ctype.h>
-
 int     main(void)
 {
         int     c1 = '9';

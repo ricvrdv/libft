@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 char    *ft_strrchr(const char *s, int c)
 {
@@ -19,9 +19,6 @@ char    *ft_strrchr(const char *s, int c)
 }
 
 /*
-#include <stdio.h>
-#include <string.h>
-
 int   main(void)
 {
         char    *string = "ornitorrinco";

@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 char    *ft_strdup(const char *s)
 {
@@ -23,9 +23,6 @@ char    *ft_strdup(const char *s)
 }
 
 /*
-#include <stdio.h>
-#include <string.h>
-
 int   main(void)
 {
         char    *to_copy = "here we go again";

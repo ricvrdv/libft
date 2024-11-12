@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 static int      count_digits(long nbr);
 static char     *mem_allocate(int digits);
@@ -62,8 +62,6 @@ static char     *mem_allocate(int digits)
 }
 
 /*
-#include <stdio.h>
-
 int   main(int argc, char *argv[])
 {
         if (argc == 2)

@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "../libft.h"
+#include "libft.h"
 
 int     ft_lstsize(t_list *lst)
 {
@@ -15,7 +13,10 @@ int     ft_lstsize(t_list *lst)
         return (count);
 }
 
-/*int   main(void)
+/*
+#include <stdio.h>
+
+int   main(void)
 {
         t_list  *head = NULL;
         t_list  *current = NULL;
@@ -48,4 +49,5 @@ int     ft_lstsize(t_list *lst)
                 free(current);
         }
         return (0);
-}*/
+}
+*/

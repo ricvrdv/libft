@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void    ft_putnbr_fd(int n, int fd)
 {
@@ -11,7 +10,7 @@ void    ft_putnbr_fd(int n, int fd)
                 return ;
         }
         if (n < 0)
-        {       
+        {
                 write(fd, "-", 1);
                 n = -n;
         }
@@ -20,6 +19,10 @@ void    ft_putnbr_fd(int n, int fd)
         digit = (n % 10) + '0';
         write(fd, &digit, 1);
 }
+
+/*
+#include <stdio.h>
+#include <fcntl.h>
 
 int   main(void)
 {
@@ -57,3 +60,4 @@ int   main(void)
 
         return (0);
 }
+*/

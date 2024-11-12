@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include "../libft.h"
+#include "libft.h"
 
 t_list  *ft_lstnew(void *content)
 {
@@ -14,11 +12,14 @@ t_list  *ft_lstnew(void *content)
         return (new_node);
 }
 
-/*int   main(void)
+/*
+#include <stdio.h>
+
+int   main(void)
 {
         t_list  *head = NULL;
         t_list  *current = NULL;
-        int     content_1 = 65;
+        char    content_1 = 'A';
         char    content_2 = 'B';
         char    content_3 = 'C';
 
@@ -42,4 +43,5 @@ t_list  *ft_lstnew(void *content)
                 free(current);
         }
         return (0);
-}*/
+}
+*/

@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int      count_digits(long nbr);
 static char     *mem_allocate(int digits);
@@ -12,7 +11,7 @@ char    *ft_itoa(int n)
         int             digits;
         int             i;
 
-        nbr = n;
+        nbr = (long)n;
         digits = count_digits(nbr);
         string = mem_allocate(digits);
         if (!string)
@@ -62,13 +61,17 @@ static char     *mem_allocate(int digits)
         return (string);
 }
 
+/*
+#include <stdio.h>
+
 int   main(int argc, char *argv[])
 {
         if (argc == 2)
         {
-                printf("Number: %s\n", argv[1]); 
+                printf("Number: %s\n", argv[1]);
                 printf("String: %s\n", ft_itoa(atoi(argv[1])));
                 return (0);
         }
         return (1);
 }
+*/

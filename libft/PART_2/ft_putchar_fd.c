@@ -1,13 +1,15 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <fcntl.h>
+#include "libft.h"
 
 void    ft_putchar_fd(char c, int fd)
 {
-        write(fd, &c, 1);
+        write(fd, &c, sizeof(char));
 }
 
-int     main(void)
+/*
+#include <stdio.h>
+#include <fcntl.h>
+
+int   main(void)
 {
         int     fd = 1;
         char    test_char = 'R';
@@ -21,7 +23,7 @@ int     main(void)
         if (fd == -1)
         {
                 perror("Error opening file");
-                return (1); 
+                return (1);
         }
         printf("TESTING FOR FILE OUTPUT:\n");
         ft_putchar_fd(test_char, fd);
@@ -35,6 +37,6 @@ int     main(void)
         read(fd, buffer, 1);
         printf("Character written to file: %c\n", buffer[0]);
         close(fd);
-
         return (0);
 }
+*/

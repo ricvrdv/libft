@@ -1,6 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <fcntl.h>
+#include "libft.h"
 
 void    ft_putendl_fd(char *s, int fd)
 {
@@ -9,11 +7,15 @@ void    ft_putendl_fd(char *s, int fd)
         i = 0;
         while (s[i])
         {
-                write(fd, &s[i], 1);
+                write(fd, &s[i], sizeof(char));
                 i++;
         }
-        write(fd, "\n", 1);
+        write(fd, "\n", sizeof(char));
 }
+
+/*
+#include <stdio.h>
+#include <fcntl.h>
 
 int   main(void)
 {
@@ -40,8 +42,9 @@ int   main(void)
                 return (1);
         }
         read(fd, buffer, 14);
-        printf("String written to file: %s\n", buffer);
+write(fd, "\n", sizeof(char));  printf("String written to file: %s\n", buffer);
         close(fd);
 
         return (0);
 }
+*/

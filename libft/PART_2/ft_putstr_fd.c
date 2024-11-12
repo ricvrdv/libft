@@ -1,20 +1,22 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <fcntl.h>
+#include "libft.h"
 
 void    ft_putstr_fd(char *s, int fd)
 {
-        size_t  i;
+        int     i;
 
         i = 0;
         while (s[i])
         {
-                write(fd, &s[i], 1);
+                write(fd, &s[i], sizeof(char));
                 i++;
         }
-}       
+}
 
-int     main(void)
+/*
+#include <stdio.h>
+#include <fcntl.h>
+
+int   main(void)
 {
         int     fd = 1;
         char    *test_str = "Bye bye";
@@ -45,3 +47,4 @@ int     main(void)
 
         return (0);
 }
+*/

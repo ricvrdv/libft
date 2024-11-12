@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "../libft.h"
+#include "libft.h"
 
 //static void   del_content(void *content);
 
@@ -12,10 +10,13 @@ void    ft_lstdelone(t_list *lst, void (*del)(void *))
         free(lst);
 }
 
-/*static void   del_content(void *content)
+/*
+static void     del_content(void *content)
 {
         free(content);
 }
+
+#include <stdio.h>
 
 int     main(void)
 {
@@ -56,4 +57,5 @@ int     main(void)
         ft_lstdelone(head, del_content);
         ft_lstdelone(third, del_content);
         return (0);
-}*/
+}
+*/

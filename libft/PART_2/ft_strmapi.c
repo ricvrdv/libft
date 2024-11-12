@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 //static char   test_tolower(unsigned int i, char c);
 
@@ -25,13 +24,16 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
         return (string);
 }
 
-/*static char   test_tolower(unsigned int i, char c)
+/*
+static char   test_tolower(unsigned int i, char c)
 {
         (void)i;
         if (c >= 'A' && c <= 'Z')
                 return (c + 32);
         return (c);
 }
+
+#include <stdio.h>
 
 int     main(void)
 {
@@ -42,6 +44,7 @@ int     main(void)
         new_string = ft_strmapi(string, test_tolower);
         printf("New string:\n\"%s\"\tAddress: %p\n", new_string, new_string);
         free(new_string);
-        
+
         return (0);
-}*/
+}
+*/

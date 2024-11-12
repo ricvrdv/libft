@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "../libft.h"
+#include "libft.h"
 
 void    ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -19,7 +17,10 @@ void    ft_lstadd_back(t_list **lst, t_list *new)
         last->next = new;
 }
 
-/*int   main(void)
+/*
+#include <stdio.h>
+
+int   main(void)
 {
         t_list  *head = NULL;
         t_list  *current = NULL;
@@ -40,7 +41,7 @@ void    ft_lstadd_back(t_list **lst, t_list *new)
         {
                 printf("\"%s\" -> ", (char *)current->content);
                 current = current->next;
-        }
+last->next = new;       }
         printf("NULL\n");
         while (head != NULL)
         {
@@ -49,4 +50,5 @@ void    ft_lstadd_back(t_list **lst, t_list *new)
                 free(current);
         }
         return (0);
-}*/
+}
+*/

@@ -55,10 +55,9 @@ BONUS = BONUS/ft_lstnew.c \
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
-SRCS_FT_PRINTF = 
-	FT_PRINTF/ft_printf.c \
-	FT_PRINTF/ft_putchar_len.c \
-	FT_PRINTF/ft_puthex_len.c \
+SRCS_FT_PRINTF = FT_PRINTF/ft_printf.c \
+        FT_PRINTF/ft_putchar_len.c \
+        FT_PRINTF/ft_puthex_len.c \
 	FT_PRINTF/ft_putnbr_len.c \
 	FT_PRINTF/ft_putpointer_len.c \
 	FT_PRINTF/ft_putstr_len.c \
@@ -66,9 +65,8 @@ SRCS_FT_PRINTF =
 
 FT_PRINTF_OBJS = $(SRCS_FT_PRINTF:.c=.o)
 
-SRCS_GET_NEXT_LINE = 
-	GET_NEXT_LINE/get_next_line.c \
-	GET_NEXT_LINE/get_next_line_utils.cc
+SRCS_GET_NEXT_LINE = GET_NEXT_LINE/get_next_line.c \
+	GET_NEXT_LINE/get_next_line_utils.c
 
 GET_NEXT_LINE_OBJS = $(SRCS_GET_NEXT_LINE:.c=.o)
 

@@ -55,16 +55,33 @@ BONUS = BONUS/ft_lstnew.c \
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
+SRCS_FT_PRINTF = 
+	FT_PRINTF/ft_printf.c \
+	FT_PRINTF/ft_putchar_len.c \
+	FT_PRINTF/ft_puthex_len.c \
+	FT_PRINTF/ft_putnbr_len.c \
+	FT_PRINTF/ft_putpointer_len.c \
+	FT_PRINTF/ft_putstr_len.c \
+	FT_PRINTF/ft_unsigned_int.c
+
+FT_PRINTF_OBJS = $(SRCS_FT_PRINTF:.c=.o)
+
+SRCS_GET_NEXT_LINE = 
+	GET_NEXT_LINE/get_next_line.c \
+	GET_NEXT_LINE/get_next_line_utils.cc
+
+GET_NEXT_LINE_OBJS = $(SRCS_GET_NEXT_LINE:.c=.o)
+
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJS) $(FT_PRINTF_OBJS) $(GET_NEXT_LINE_OBJS)
+	ar rcs $(NAME) $(OBJS) $(FT_PRINTF_OBJS) $(GET_NEXT_LINE_OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJS) $(EXEC) $(BONUS_OBJS)
+	rm -rf $(OBJS) $(EXEC) $(BONUS_OBJS) $(FT_PRINTF_OBJS) $(GET_NEXT_LINE_OBJS)
 
 fclean: clean
 	rm -rf $(NAME)
@@ -72,7 +89,7 @@ fclean: clean
 re: fclean
 	make && make bonus
 
-bonus:  $(BONUS_OBJS) $(OBJS)
-	@make OBJS="$(BONUS_OBJS) $(OBJS)" all
+bonus:  $(BONUS_OBJS) $(OBJS) $(FT_PRINTF_OBJS) $(GET_NEXT_LINE_OBJS)
+	@make OBJS="$(BONUS_OBJS) $(OBJS) $(FT_PRINTF_OBJS) $(GET_NEXT_LINE_OBJS)" all
 
 .PHONY: all clean fclean re bonus

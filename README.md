@@ -1,4 +1,4 @@
-# LIBFT
+# 42 - LIBFT
 
 ### [MILESTONE 0]
 ### SUMMARY
